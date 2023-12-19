@@ -214,14 +214,17 @@ footer {
 
 /* cards */
 .slick-carousel {
-    width: 80%; /* Adjust the width of the carousel */
+    width: 90%; /* Adjust the width of the carousel */
     margin: 20px auto;
+    background-color: #f8f4f4; /* Set your desired background color here */
+    padding: 30px;
 }
 
 .slick-carousel .card {
     width: 100%; /* Adjust card width */
-    margin: 0 10px;
+    margin: 10px 10px;
     outline: none; /* Remove default focus outline */
+    transition: transform 0.3s ease;
 }
 
 .card {
@@ -260,6 +263,10 @@ footer {
     color: #845BB3;
     font-weight: bold;
 }
+.slick-carousel .card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     .card {
@@ -272,5 +279,78 @@ footer {
     .card {
         width: calc(100% - 30px);
         max-width: 100%;
+    }
+}
+
+/* ourfeatures */
+.features-container {
+    background: #f8f4f4;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 20px 0;
+    width: 90%;
+    transform: translatex(5.5%);
+    font-size: 12px;
+    
+}
+
+.features-container h2 {
+    color: #191919;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Show two columns on larger screens */
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.feature img {
+    width: 40%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    color: #845BB3;
+}
+.feature:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+    ti
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .feature {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature {
+        width: calc(100% - 20px);
+        /* Adjust font size for smaller screens (phones) */
+        font-size: 10px;
+        padding-left: 10%;
+        padding-right: 10%;
+        
+    }
+
+    /* Adjust image size for smaller screens */
+    .feature img {
+        max-width: 40%; /* Reduce image size */
     }
 }

@@ -26,6 +26,7 @@ $(document).ready(function(){
         slidesToScroll: 1, // Number of slides to scroll
         autoplay: true, // Set to true for automatic sliding
         autoplaySpeed: 2000, // Time between slides in milliseconds
+        dots: true, // Enable dots (pagination)
         responsive: [
             {
                 breakpoint: 768, // Responsive breakpoint
@@ -42,4 +43,5 @@ $(document).ready(function(){
         ]
     });
 });
+
 

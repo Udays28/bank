@@ -44,4 +44,78 @@ $(document).ready(function(){
     });
 });
 
+// emi
+window.onload = function() {
+    // Default values for loan amount, interest rate, and loan tenure
+    const defaultLoanAmount = 500000; // Replace with your default value
+    const defaultInterestRate = 8; // Replace with your default value
+    const defaultLoanTenure = 12; // Replace with your default value
+
+    // Set default values in input fields upon page load
+    document.getElementById('loanAmount').value = defaultLoanAmount;
+    document.getElementById('interestRate').value = defaultInterestRate;
+    document.getElementById('loanTenure').value = defaultLoanTenure;
+
+    // Calculate EMI based on default values
+    calculateEMI();
+};
+function calculateEMI() {
+    const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+    const interestRate = parseFloat(document.getElementById('interestRate').value);
+    const loanTenure = parseFloat(document.getElementById('loanTenure').value);
+    const tenureType = document.getElementById('tenureType').value;
+
+    if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTenure)) {
+        console.error('Invalid input');
+        return;
+    }
+
+    let r = interestRate / (12 * 100);
+    let n = tenureType === 'months' ? loanTenure : loanTenure * 12;
+    let emi = (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+    document.getElementById('emiResult').innerText = emi.toFixed(2);
+
+    let totalInterest = emi * n - loanAmount;
+    let totalPayments = loanAmount + totalInterest;
+
+    document.getElementById('totalInterest').innerText = totalInterest.toFixed(2);
+    document.getElementById('totalPayments').innerText = totalPayments.toFixed(2);
+
+    createPaymentBreakupChart(emi, totalInterest);
+}
+
+function createPaymentBreakupChart(emi, totalInterest) {
+    const paymentBreakupChart = document.getElementById('paymentBreakupChart').getContext('2d');
+    const data = {
+        labels: ['Principal', 'Interest'],
+        datasets: [{
+            data: [emi.toFixed(2), totalInterest.toFixed(2)],
+            backgroundColor: [
+                'rgb(54, 162, 235)',
+                'rgb(255, 99, 132)'
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    };
+
+    if (window.paymentChart) {
+        window.paymentChart.destroy();
+    }
+
+    window.paymentChart = new Chart(paymentBreakupChart, config);
+}
+
+
+
+
 

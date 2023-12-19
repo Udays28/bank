@@ -431,3 +431,95 @@ footer {
         font-size: 12px;
     }
 }
+/* for emi calculator */
+/* Style for EMI Calculator section */
+.emi-calculator-container {
+    background-color: #f8f4f4; /* Same background color as the rest */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    transform: translateX(5.5%);
+}
+
+.emi-inputs,
+.emi-results,
+.emi-chart {
+    width: 30%; /* Adjust column width for larger screens */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Container background color */
+    border-radius: 8px;
+}
+
+.emi-inputs h3,
+.emi-results h3,
+.emi-chart h3 {
+    color: #191919; /* Heading color */
+}
+
+.emi-inputs label,
+.emi-inputs input,
+.emi-inputs select,
+.emi-inputs button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.emi-inputs button {
+    background-color: #845BB3; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.emi-chart {
+    /* Add appropriate styles to ensure a fixed height for the chart container */
+    height: 400px; /* Set an appropriate height for the container */
+}
+
+
+.emi-results {
+    background-color: #f8f4f4; /* Background color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing at the bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a raised effect */
+}
+
+.emi-results h3 {
+    color: #191919; /* Heading color */
+    font-size: 24px; /* Font size for the heading */
+    margin-bottom: 15px; /* Spacing after the heading */
+}
+
+.emi-results p {
+    color: #191919; /* Text color */
+    font-size: 18px; /* Font size for text */
+    margin-bottom: 10px; /* Spacing after each paragraph */
+}
+
+.emi-results span {
+    font-weight: bold; /* Bolden the output values */
+    color: #845BB3; /* Adjust color for result values */
+}
+
+
+
+.emi-chart canvas {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .emi-inputs,
+    .emi-results,
+    .emi-chart {
+        width: 100%; /* Adjust column width for smaller screens */
+    }
+}

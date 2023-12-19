@@ -328,7 +328,6 @@ footer {
 .feature:hover {
     transform: scale(1.05); /* Scale up the card on hover */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
-    ti
 }
 
 
@@ -352,5 +351,83 @@ footer {
     /* Adjust image size for smaller screens */
     .feature img {
         max-width: 40%; /* Reduce image size */
+    }
+}
+/* Base styles for the working section */
+.services-container {
+    background-color: #f8f4f4;
+    padding: 40px;
+    width: 90%;
+    transform: translatex(5.5%);
+}
+
+.services-container h2 {
+    color: #191919;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.service-card {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card img {
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #191919;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #845BB3;
+    font-size: 14px;
+}
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(50% - 40px);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+}
+
+/* Additional adjustments for smaller screens */
+@media (max-width: 320px) {
+    .service-card h3 {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 12px;
     }
 }

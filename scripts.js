@@ -82,15 +82,15 @@ function calculateEMI() {
     document.getElementById('totalInterest').innerText = totalInterest.toFixed(2);
     document.getElementById('totalPayments').innerText = totalPayments.toFixed(2);
 
-    createPaymentBreakupChart(emi, totalInterest);
+    createPaymentBreakupChart(loanAmount, totalInterest, emi);
 }
 
-function createPaymentBreakupChart(emi, totalInterest) {
+function createPaymentBreakupChart(principal, totalInterest, emi) {
     const paymentBreakupChart = document.getElementById('paymentBreakupChart').getContext('2d');
     const data = {
         labels: ['Principal', 'Interest'],
         datasets: [{
-            data: [emi.toFixed(2), totalInterest.toFixed(2)],
+            data: [principal.toFixed(2), totalInterest.toFixed(2)],
             backgroundColor: [
                 'rgb(54, 162, 235)',
                 'rgb(255, 99, 132)'

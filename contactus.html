@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+    <!-- Link Slick Theme CSS (Optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="your-logo.png" alt="Your Logo">
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="#">Loan Against Property</a></li>
+            <li><a href="#">Home Loan</a></li>
+            <li><a href="#">Loan Against Securities</a></li>
+            <li><a href="#">Business Loan</a></li>
+            <li><a href="#">Working Capital Loan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Contact Bharosabank Support Team</h1>
+            <form name="submit-to-google-sheet">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="new-container">
+            <div class="content-section">
+              <h2>Need Instant Help?</h2>
+              <p>How can we help you today? Reach out to us if you have queries regarding our services, annual maintenance packages, feedback, grievances, or other. We'd love to hear from you.</p>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <!-- <img src="image3.jpg" alt="Image 3"> -->
+                    <div class="card-content">
+                      <h3>Branch Office</h3>
+                      <p>If you have any grievances, let us know. We're here to assist.</p>
+                    </div>
+                  </div>
+              <div class="card">
+                <!-- <img src="Images/phone-icon-6753051_1280.webp" alt="Image 1"> -->
+                <div class="card-content">
+                  <h3>Call us at </h3>
+                  <p>+918700546055</p>
+                </div>
+              </div>
+              <div class="card">
+                <!-- <img src="image2.jpg" alt="Image 2"> -->
+                <div class="card-content">
+                  <h3>Email Address</h3>
+                  <p>Share your valuable feedback with us. We appreciate your thoughts!</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="your-logo.png" alt="Your Logo">
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Loan Against Property</a></li>
+                    <li><a href="#">Home Loan</a></li>
+                    <li><a href="#">Loan Against Securities</a></li>
+                    <li><a href="#">Business Loan</a></li>
+                    <li><a href="#">Working Capital Loan</a></li>
+                    <!-- Add other links as needed -->
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p>Phone: +1 234 567 890</p>
+                <p>Email: info@example.com</p>
+                <p>Address: 1234 Street Name, City, Country</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-nav-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <!-- Add more links as needed -->
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Bharosabank. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="scripts.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzHCOmIG_XvM2BgZRrPVSL0M4THE-jYyveFqON9JLMXc7QDGz3esMWgS2bsvj_NNffp/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

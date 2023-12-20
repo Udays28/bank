@@ -47,6 +47,7 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
+    
 }
 
 .nav-links li {
@@ -59,7 +60,7 @@ body {
     font-family: Lexend;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bolder;
     line-height: 150%;
     text-decoration: none;
     transition: all 0.3s ease;

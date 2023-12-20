@@ -114,6 +114,7 @@ function createPaymentBreakupChart(principal, totalInterest, emi) {
 
     window.paymentChart = new Chart(paymentBreakupChart, config);
 }
+//reset the information
 
 
 

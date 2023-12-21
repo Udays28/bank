@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+    <!-- Link Slick Theme CSS (Optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="your-logo.png" alt="Your Logo">
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="LAP.html">Loan Against Property</a></li>
+            <li><a href="homeloan.html">Home Loan</a></li>
+            <li><a href="LAS.html">Loan Against Securities</a></li>
+            <li><a href="business.html">Business Loan</a></li>
+            <li><a href="workingcapital.html">Working Capital Loan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="lap-container">
+            <div class="lap-column">
+              <h2>Home Loan</h2>
+              <h4>Gives you access to immediate funds</h4>
+              <h2>Benefits of Bharosa Bank Home Loan</h2>
+              <ul>
+                <li>Low EMIs</li>
+                <li>Immediate Funds availability</li>
+                <li>Fast and easy Loan Processing</li>
+                <li>Speedy Approvals</li>
+                <li>Flexible Tenure</li>
+                <li>Simple and Hassle free Documentation</li>
+                <li>Easy Balance Transferring</li>
+              </ul>
+            </div>
+            <div class="lap-column">
+                <div class="container">
+                    <h2>Contact Bharosa bank</h2>
+                    <form name="submit-to-google-sheet">
+                      <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                      </div>
+                      <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit">Submit</button>
+                      </div>
+                    </form>
+                    <p id="confirmationMessage" style="display: none; color: green;">Form submitted! Thank you for reaching out.</p>
+                  </div>
+            </div>
+        </div>
+
+        <div class="types-of-lap">
+            <h2>Types of Home Loan</h2>
+            
+            <ul>
+              <li> Pradhan Mantri Awas Yojana (PMAY)</li>
+              <li>  Easy balance transfer facility</li>
+              <li>Top-up loan</li>
+              <li>Property dossier</li>
+            </ul>
+          </div>
+          <div class="cri-of-lap">
+            <h2>Home Loan Eligibility Criteria</h2>
+            <p>Bharosa Bank Eligibility Criteria for Home Loans are very easy; Any Indian with a good financial profile can obtain a loan. Some of the criteria differ depending on whether you are self-employed or salaried while others remain common.</p>
+            <ul>
+              <li>Identity Proof (any one)
+                PAN card,
+                Driving license,
+                Voter ID,
+                Valid passport</li>
+              <li>Address Proof (any one)Electricity bill/water bill/telephone bill</li>
+              <li>Other Documents:
+                Passport-size photograph,
+                Proof of 5 years of business continuity (for self-employed individuals)</li>
+              <li>Bank Statements for the last 6 months</li>
+              <li> Last 6 months salary slips (for salaried customers)</li>
+              <li> Audited financial statements (for self-employed and SME applicants)</li>
+              <li> Form 16</li>
+              <li> Income Tax Returns for the last 3 years</li>
+            </ul>
+          </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="your-logo.png" alt="Your Logo">
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="LAP.html">Loan Against Property</a></li>
+            <li><a href="homeloan.html">Home Loan</a></li>
+            <li><a href="LAS.html">Loan Against Securities</a></li>
+            <li><a href="business.html">Business Loan</a></li>
+            <li><a href="workingcapital.html">Working Capital Loan</a></li>
+                    <!-- Add other links as needed -->
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p>Phone: +1 234 567 890</p>
+                <p>Email: info@example.com</p>
+                <p>Address: A 27 new krishna park 
+                  Basement vikas puri near janakpuri west metro station</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-nav-links">
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="index.html">Home</a>
+                <!-- Add more links as needed -->
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Bharosa bank. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="scripts.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzHCOmIG_XvM2BgZRrPVSL0M4THE-jYyveFqON9JLMXc7QDGz3esMWgS2bsvj_NNffp/exec';
+        const form = document.forms['submit-to-google-sheet'];
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+              console.log('Success!', response);
+              // Reset the form after successful submission (if needed)
+              form.reset();
+              // Show confirmation message (if needed)
+              document.getElementById('confirmationMessage').style.display = 'block';
+              setTimeout(function() {
+                document.getElementById('confirmationMessage').style.display = 'none';
+              }, 3000);
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+      </script>
+</body>
+</html>

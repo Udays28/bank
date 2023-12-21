@@ -17,19 +17,19 @@
 
    
         
-        <nav class="navbar">
-            <div class="logo">
-                <img src="your-logo.png" alt="Your Logo">
-            </div>
-            <div class="nav-toggle" onclick="toggleMenu()">☰</div>
-            <ul class="nav-links">
-                <li><a href="#">Loan Against Property</a></li>
-                <li><a href="#">Home Loan</a></li>
-                <li><a href="#">Loan Against Securities</a></li>
-                <li><a href="#">Business Loan</a></li>
-                <li><a href="#">Working Capital Loan</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="your-logo.png" alt="Your Logo">
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="LAP.html">Loan Against Property</a></li>
+            <li><a href="homeloan.html">Home Loan</a></li>
+            <li><a href="LAS.html">Loan Against Securities</a></li>
+            <li><a href="business.html">Business Loan</a></li>
+            <li><a href="workingcapital.html">Working Capital Loan</a></li>
+        </ul>
+    </nav>
     <main>
         <a href="contactus.html" class="contact-button">Contact Us</a>
 
@@ -50,7 +50,62 @@
             <div><img src="Images/20211022133411-3766.png" alt="Image 5"></div>
             <!-- Add more images as needed -->
         </div>
-
+        <!-- emi calculater -->
+        <h2>EMI Calculator</h2>
+        <div class="emi-calculator-container">
+            <div class="emi-inputs">
+                <!-- Input fields for EMI calculation -->
+                <h3>EMI Calculator</h3>
+                <label for="loanAmount">Loan Amount:</label>
+                <input type="number" id="loanAmount" placeholder="Enter Loan Amount">
+        
+                <label for="interestRate">Interest Rate:</label>
+                <input type="number" id="interestRate" placeholder="Enter Interest Rate">
+        
+                <label for="loanTenure">Loan Tenure:</label>
+                <input type="number" id="loanTenure" placeholder="Enter Loan Tenure">
+                <select id="tenureType">
+                    <option value="months">Months</option>
+                    <option value="years">Years</option>
+                </select>
+        
+                <button onclick="calculateEMI()">Calculate</button>
+            </div>
+        
+            <div class="emi-results">
+                <!-- Display calculated EMI results -->
+                <h3>EMI Calculation Results</h3>
+                <p>Loan EMI: <span id="emiResult"></span></p>
+                <p>Total Interest Payable: <span id="totalInterest"></span></p>
+                <p>Total Payments: <span id="totalPayments"></span></p>
+            </div>
+        
+            <div class="emi-chart">
+                <!-- Pie chart for payment breakup -->
+                <h3>Payment Breakup</h3>
+                <canvas id="paymentBreakupChart"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Contact Bharosa bank Support Team</h1>
+            <form name="submit-to-google-sheet">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <p id="confirmationMessage" style="display: none; color: green;">Form submitted! Thank you for reaching out.</p>
+          </div>
         <div class="offerings-container">
             <h2>Explore Our Offerings</h2>
             <div class="slick-carousel">
@@ -58,43 +113,43 @@
                     <img src="Images/Homecardjpg.jpg" alt="Card Image 1">
                     <div class="card-content">
                         <h3>Home Loan</h3>
-                        <p>Buying a home/house is a dream for many people and involves a lot of financial planning.<strong>Bharosa bank Home Loan</strong> makes it easier for those who want to build this home dream.
+                        <p><strong> Rate Of Interest: 8.35%</strong>
                         </p>
-                        <a href="#">Know More</a>
+                        <a href="homeloan.html">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="Images/Bussmiesscardjpg.jpg" alt="Card Image 1">
                     <div class="card-content">
                         <h3>Business Loan</h3>
-                        <p><strong> Bharosa bank </strong> appreciated that each business has new/unique financial needs. <strong> Bharosa bank </strong> teams take great pride and effort in making sure that entrepreneurs meet their business goals by offering them good financial solutions. 
+                        <p><strong> Rate Of Interest: 14%</strong> 
                         </p>
-                        <a href="#">Know More</a>
+                        <a href="business.html">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="Images/WCcard.jpg" alt="Card Image 1">
                     <div class="card-content">
                         <h3>working capital Loan</h3>
-                        <p>A <strong>working capital loan</strong> is a type of funding that takes care of a company's costs for daily day-night operations. You may use the loan amount to provide for short-term operational necessities rather than long-term investments from <strong> Bharosa bank </strong>.</p>
-                        <a href="#">Know More</a>
+                        <p><strong> Rate Of Interest: 8.60%</strong>.</p>
+                        <a href="workingcapital.html">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="Images/LAScard.jpg" alt="Card Image 1">
                     <div class="card-content">
                         <h3>Loan Against Securities</h3>
-                        <p><strong> Loan Against Securities </strong> from <strong> Bharosa bank </strong> you can open the potential of your investments. All you have to do is guarantee your mutual funds, shares, bonds, or securities and get access to instant liquidity
+                        <p><strong> Rate Of Interest: 8.60%</strong>
                         </p>
-                        <a href="#">Know More</a>
+                        <a href="LAS.html">Know More</a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="Images/LAPcard.jpg" alt="Card Image 1">
                     <div class="card-content">
                         <h3>Loan Against Property</h3>
-                        <p>You can get a secured loan as a commercial property or residential property loan fund any form of financial necessity only on <strong> Bharosa bank </strong>. Borrowers mortgage the property as collateral to avail loan amounts based on its live market value.</p>
-                        <a href="#">Know More</a>
+                        <p><strong> Rate Of Interest: 8.60%</strong></p>
+                        <a href="LAP.html">Know More</a>
                     </div>
                 </div>  
             </div>
@@ -149,42 +204,7 @@
             </div>
         </section>
 
-        <!-- emi calculater -->
-        <h2>EMI Calculator</h2>
-        <div class="emi-calculator-container">
-            <div class="emi-inputs">
-                <!-- Input fields for EMI calculation -->
-                <h3>EMI Calculator</h3>
-                <label for="loanAmount">Loan Amount:</label>
-                <input type="number" id="loanAmount" placeholder="Enter Loan Amount">
         
-                <label for="interestRate">Interest Rate:</label>
-                <input type="number" id="interestRate" placeholder="Enter Interest Rate">
-        
-                <label for="loanTenure">Loan Tenure:</label>
-                <input type="number" id="loanTenure" placeholder="Enter Loan Tenure">
-                <select id="tenureType">
-                    <option value="months">Months</option>
-                    <option value="years">Years</option>
-                </select>
-        
-                <button onclick="calculateEMI()">Calculate</button>
-            </div>
-        
-            <div class="emi-results">
-                <!-- Display calculated EMI results -->
-                <h3>EMI Calculation Results</h3>
-                <p>Loan EMI: <span id="emiResult"></span></p>
-                <p>Total Interest Payable: <span id="totalInterest"></span></p>
-                <p>Total Payments: <span id="totalPayments"></span></p>
-            </div>
-        
-            <div class="emi-chart">
-                <!-- Pie chart for payment breakup -->
-                <h3>Payment Breakup</h3>
-                <canvas id="paymentBreakupChart"></canvas>
-            </div>
-        </div>
         
         
         
@@ -199,11 +219,11 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Loan Against Property</a></li>
-                    <li><a href="#">Home Loan</a></li>
-                    <li><a href="#">Loan Against Securities</a></li>
-                    <li><a href="#">Business Loan</a></li>
-                    <li><a href="#">Working Capital Loan</a></li>
+                    <li><a href="LAP.html">Loan Against Property</a></li>
+            <li><a href="homeloan.html">Home Loan</a></li>
+            <li><a href="LAS.html">Loan Against Securities</a></li>
+            <li><a href="business.html">Business Loan</a></li>
+            <li><a href="workingcapital.html">Working Capital Loan</a></li>
                     <!-- Add other links as needed -->
                 </ul>
             </div>
@@ -211,13 +231,15 @@
                 <h4>Contact Information</h4>
                 <p>Phone: +1 234 567 890</p>
                 <p>Email: info@example.com</p>
-                <p>Address: 1234 Street Name, City, Country</p>
+                <p>Address: A 27 new krishna park 
+                    Basement vikas puri near janakpuri west metro stationy</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-nav-links">
-                <a href="#">About Us</a>
+                <a href="aboutus.html">About Us</a>
                 <a href="contactus.html">Contact Us</a>
+                <a href="index.html">Home</a>
                 <!-- Add more links as needed -->
             </div>
             <div class="footer-copyright">
@@ -232,5 +254,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="scripts.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzHCOmIG_XvM2BgZRrPVSL0M4THE-jYyveFqON9JLMXc7QDGz3esMWgS2bsvj_NNffp/exec';
+        const form = document.forms['submit-to-google-sheet'];
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+              console.log('Success!', response);
+              // Reset the form after successful submission (if needed)
+              form.reset();
+              // Show confirmation message (if needed)
+              document.getElementById('confirmationMessage').style.display = 'block';
+              setTimeout(function() {
+                document.getElementById('confirmationMessage').style.display = 'none';
+              }, 3000);
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+      </script>
 </body>
 </html>

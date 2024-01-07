@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Bharosa Bank: Your Path to Financial Freedom</title>
     <!-- Link Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
     <!-- Your CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -45,14 +45,55 @@
                 <a href="apply-now-link">Apply Now</a>
             </div>
         </div>         -->
-        <div class="carousel">
+        <div class="home-container">
+            <div class="home-column">
+                <img src="Images/homelogo.png" alt="Image Description" class="column-image">
+            </div>
+            <div class="home-column">
+                <div class="container">
+                    <h2>Contact Bharosa Bank</h2>
+                    <form name="submit-to-google-sheet">
+                      <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                        <select id="subject" name="subject" required>
+                          <option value="" disabled selected>Select Subject</option>
+                          <option value="Loan Against Property">Loan Against Property</option>
+                          <option value="Home Loan">Home Loan</option>
+                          <option value="Loan Against Securities">Loan Against Securities</option>
+                          <option value="Business Loan">Business Loan</option>
+                          <option value="Working Capital Loan">Working Capital Loan</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        <select id="loan-amount" name="loan-amount" required>
+                          <option value="" disabled selected>Select Loan Amount</option>
+                          <option value="1000000">₹1,000,000</option>
+                          <option value="2000000">₹2,000,000</option>
+                          <option value="2500000">₹2,500,000</option>
+                          <option value="5000000">₹5,000,000</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit">Submit</button>
+                      </div>
+                    </form>
+                    <p id="confirmationMessage" style="display: none; color: green;">Form submitted! Thank you for reaching out.</p>
+                  </div>
+            </div>
+        </div>
+        <!-- <div class="carousel">
             <div><img src="Images/HomeLoan.png" alt="Image 1"></div>
             <div><img src="Images/20210907133303-2926.png" alt="Image 2"></div>
             <div><img src="Images/20211022133239-5325.png" alt="Image 3"></div>
             <div><img src="Images/20211022133358-9619.png" alt="Image 4"></div>
             <div><img src="Images/20211022133411-3766.png" alt="Image 5"></div>
-            <!-- Add more images as needed -->
-        </div>
+            
+        </div> -->
         <!-- emi calculater -->
         <h2>EMI Calculator</h2>
         <div class="emi-calculator-container">
@@ -89,26 +130,41 @@
                 <canvas id="paymentBreakupChart"></canvas>
             </div>
         </div>
-        <div class="container">
-            <h1>Contact Bharosa bank Support Team</h1>
+        <!-- <div class="container">
+            <h1>Contact Bharosa Bank Support Team</h1>
             <form name="submit-to-google-sheet">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
+                <div class="form-group">
+                  <input type="text" id="name" name="name" placeholder="Name" required>
+                  <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select Subject</option>
+                    <option value="Loan Against Property">Loan Against Property</option>
+                    <option value="Home Loan">Home Loan</option>
+                    <option value="Loan Against Securities">Loan Against Securities</option>
+                    <option value="Business Loan">Business Loan</option>
+                    <option value="Working Capital Loan">Working Capital Loan</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" placeholder="Message" required></textarea>
+                  <select id="loan-amount" name="loan-amount" required>
+                    <option value="" disabled selected>Select Loan Amount</option>
+                    <option value="1000000">₹1,000,000</option>
+                    <option value="2000000">₹2,000,000</option>
+                    <option value="2500000">₹2,500,000</option>
+                    <option value="5000000">₹5,000,000</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+              
             <p id="confirmationMessage" style="display: none; color: green;">Form submitted! Thank you for reaching out.</p>
-          </div>
+          </div> -->
         <div class="offerings-container">
             <h2>Explore Our Offerings</h2>
             <div class="slick-carousel">
@@ -186,7 +242,7 @@
                 <!-- Add more feature items with images -->
             </div>
         </div>
-        <h2>How Bharosa bank Work</h2>
+        <h2>How Bharosa Bank Work</h2>
         <section class="services-container">
             <div class="services">
                 <div class="service-card">
@@ -207,8 +263,24 @@
             </div>
         </section>
 
-        
-        
+        <div class="outer-container">
+            <div class="inner-container">
+              <div class="logo-container">
+            <img src="Images/allahabad.png" alt="Logo 1">
+            <img src="Images/axis.png" alt="Logo 2">
+            <img src="Images/bandhanbank.png" alt="Logo 3">  
+            <img src="Images/bob.png" alt="Logo 1">
+            <img src="Images/centralbank.png" alt="Logo 2">
+            <img src="Images/hdfc.png" alt="Logo 3">  
+            <img src="Images/icici.png" alt="Logo 1">
+            <img src="Images/idfc.png" alt="Logo 2">
+            <img src="Images/kotak.png" alt="Logo 3">  
+            <img src="Images/pnb.png" alt="Logo 1">
+            <img src="Images/sbi.png" alt="Logo 2">
+            <img src="Images/unionbank.png" alt="Logo 3">  
+        </div>
+    </div>
+  </div>
         
         
         
@@ -218,37 +290,37 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="index.html">
-        <img src="Images/your-logo.png" alt="Your Logo">
-      </a>
+                    <img src="Images/your-logo.png" alt="Your Logo">
+                </a>
+                <p>Apka bharosa hmara viswaas</p> <!-- Tagline added here -->
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="LAP.html">Loan Against Property</a></li>
-            <li><a href="homeloan.html">Home Loan</a></li>
-            <li><a href="LAS.html">Loan Against Securities</a></li>
-            <li><a href="business.html">Business Loan</a></li>
-            <li><a href="workingcapital.html">Working Capital Loan</a></li>
+                    <li><a href="homeloan.html">Home Loan</a></li>
+                    <li><a href="LAS.html">Loan Against Securities</a></li>
+                    <li><a href="business.html">Business Loan</a></li>
+                    <li><a href="workingcapital.html">Working Capital Loan</a></li>
                     <!-- Add other links as needed -->
                 </ul>
             </div>
             <div class="contact-info">
                 <h4>Contact Information</h4>
                 <p>Phone: +91 9873711151</p>
-                <p>Email: info@example.com</p>
-                <p>Address: A 27 new krishna park 
-                    Basement vikas puri near janakpuri west metro stationy</p>
+                <p>Email: bharosabank@gmail.com</p>
+                <p>Address: A27, new krishna park Basement vikas puri near janakpuri west metro station</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-nav-links">
+            <div class="footer-nav-links">  
                 <a href="aboutus.html">About Us</a>
                 <a href="contactus.html">Contact Us</a>
                 <a href="index.html">Home</a>
                 <!-- Add more links as needed -->
             </div>
             <div class="footer-copyright">
-                <p>&copy; 2023 Bharosa bank. All Rights Reserved.</p>
+                <p>&copy; 2023 Bharosa Bank. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

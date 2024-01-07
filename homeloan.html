@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
     <!-- Your CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -47,7 +47,7 @@
             </div>
             <div class="lap-column">
                 <div class="container">
-                    <h2>Contact Bharosa bank</h2>
+                    <h2>Contact Bharosa Bank</h2>
                     <form name="submit-to-google-sheet">
                       <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Name" required>
@@ -55,10 +55,24 @@
                       </div>
                       <div class="form-group">
                         <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <select id="subject" name="subject" required>
+                          <option value="" disabled selected>Select Subject</option>
+                          <option value="Loan Against Property">Loan Against Property</option>
+                          <option value="Home Loan">Home Loan</option>
+                          <option value="Loan Against Securities">Loan Against Securities</option>
+                          <option value="Business Loan">Business Loan</option>
+                          <option value="Working Capital Loan">Working Capital Loan</option>
+                        </select>
                       </div>
                       <div class="form-group">
                         <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        <select id="loan-amount" name="loan-amount" required>
+                          <option value="" disabled selected>Select Loan Amount</option>
+                          <option value="1000000">₹1,000,000</option>
+                          <option value="2000000">₹2,000,000</option>
+                          <option value="2500000">₹2,500,000</option>
+                          <option value="5000000">₹5,000,000</option>
+                        </select>
                       </div>
                       <div class="form-group">
                         <button type="submit">Submit</button>
@@ -102,44 +116,43 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
+      <div class="footer-content">
+          <div class="footer-logo">
               <a href="index.html">
-        <img src="Images/your-logo.png" alt="Your Logo">
-      </a>
+                  <img src="Images/your-logo.png" alt="Your Logo">
               </a>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="LAP.html">Loan Against Property</a></li>
-            <li><a href="homeloan.html">Home Loan</a></li>
-            <li><a href="LAS.html">Loan Against Securities</a></li>
-            <li><a href="business.html">Business Loan</a></li>
-            <li><a href="workingcapital.html">Working Capital Loan</a></li>
-                    <!-- Add other links as needed -->
-                </ul>
-            </div>
-            <div class="contact-info">
-                <h4>Contact Information</h4>
-                <p>Phone: +91 9873711151</p>
-                <p>Email: info@example.com</p>
-                <p>Address: A 27 new krishna park 
-                  Basement vikas puri near janakpuri west metro station</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-nav-links">
-                <a href="aboutus.html">About Us</a>
-                <a href="contactus.html">Contact Us</a>
-                <a href="index.html">Home</a>
-                <!-- Add more links as needed -->
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2023 Bharosa bank. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+              <p>Apka bharosa hmara viswaas</p> <!-- Tagline added here -->
+          </div>
+          <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="LAP.html">Loan Against Property</a></li>
+                  <li><a href="homeloan.html">Home Loan</a></li>
+                  <li><a href="LAS.html">Loan Against Securities</a></li>
+                  <li><a href="business.html">Business Loan</a></li>
+                  <li><a href="workingcapital.html">Working Capital Loan</a></li>
+                  <!-- Add other links as needed -->
+              </ul>
+          </div>
+          <div class="contact-info">
+              <h4>Contact Information</h4>
+              <p>Phone: +91 9873711151</p>
+              <p>Email: bharosabank@gmail.com</p>
+              <p>Address: A27, new krishna park Basement vikas puri near janakpuri west metro station</p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-nav-links">  
+              <a href="aboutus.html">About Us</a>
+              <a href="contactus.html">Contact Us</a>
+              <a href="index.html">Home</a>
+              <!-- Add more links as needed -->
+          </div>
+          <div class="footer-copyright">
+              <p>&copy; 2023 Bharosa Bank. All Rights Reserved.</p>
+          </div>
+      </div>
+  </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
